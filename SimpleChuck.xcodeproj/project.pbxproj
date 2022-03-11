@@ -11,6 +11,8 @@
 		6A016CD927DAF0A10052257B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A016CD827DAF0A10052257B /* ContentView.swift */; };
 		6A016CDB27DAF0A30052257B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A016CDA27DAF0A30052257B /* Assets.xcassets */; };
 		6A016CDE27DAF0A30052257B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A016CDD27DAF0A30052257B /* Preview Assets.xcassets */; };
+		6A016CE627DAF10A0052257B /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A016CE527DAF10A0052257B /* Joke.swift */; };
+		6A016CE927DAF14E0052257B /* JokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A016CE827DAF14E0052257B /* JokeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		6A016CD827DAF0A10052257B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6A016CDA27DAF0A30052257B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A016CDD27DAF0A30052257B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6A016CE527DAF10A0052257B /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		6A016CE827DAF14E0052257B /* JokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		6A016CD527DAF0A10052257B /* SimpleChuck */ = {
 			isa = PBXGroup;
 			children = (
+				6A016CE727DAF1230052257B /* Network */,
+				6A016CE427DAF0F80052257B /* Model */,
 				6A016CD627DAF0A10052257B /* SimpleChuckApp.swift */,
 				6A016CD827DAF0A10052257B /* ContentView.swift */,
 				6A016CDA27DAF0A30052257B /* Assets.xcassets */,
@@ -65,6 +71,22 @@
 				6A016CDD27DAF0A30052257B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6A016CE427DAF0F80052257B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A016CE527DAF10A0052257B /* Joke.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A016CE727DAF1230052257B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6A016CE827DAF14E0052257B /* JokeManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A016CE927DAF14E0052257B /* JokeManager.swift in Sources */,
 				6A016CD927DAF0A10052257B /* ContentView.swift in Sources */,
 				6A016CD727DAF0A10052257B /* SimpleChuckApp.swift in Sources */,
+				6A016CE627DAF10A0052257B /* Joke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -251,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
