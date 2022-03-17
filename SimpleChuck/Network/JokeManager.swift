@@ -11,7 +11,7 @@ class JokeManager {
     
     let JokeUrl = "https://api.chucknorris.io/jokes/random"
     let CategoriesUrl = "https://api.chucknorris.io/jokes/categories"
-    let AllCategories = "*** ALL ***"
+    let AllCategories = "*** All Categories ***"
     
     // MARK: - Request Joke
     func fetchJoke(category: String) async throws -> Joke {
@@ -41,15 +41,19 @@ class JokeManager {
         
         let urlRequest = URLRequest(url: url)
         
-        let (data, response) = try await URLSession.shared.data(for: urlRequest)
-        
-        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-            fatalError("Error fetching joke categories")
+        do {
+            let (data, response) = try await URLSession.shared.data(for: urlRequest)
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+                fatalError("Error fetching joke categories")
+            }
+            
+            let decodedData = try JSONDecoder().decode(Welcome.self, from: data)
+            
+            return decodedData
+        } catch {
+            return []
         }
         
-        let decodedData = try JSONDecoder().decode(Welcome.self, from: data)
-        
-        return decodedData
     }
     
 }

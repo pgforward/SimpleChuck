@@ -13,20 +13,24 @@ struct JokeView: View {
     
     var body: some View {
         NavigationView {
-
+            
             VStack {
                 JokeHeaderView()
                     .environmentObject(jvm)
-                JokeListView()
-                    .environmentObject(jvm)
+                if !jvm.showCategoryList {
+                    JokeListView()
+                        .environmentObject(jvm)
+                }
                 
             }
             .background(Color.purple.opacity(0.5))
             .navigationTitle("Chuck Norris Jokes")
+            .task {
+                await jvm.fetchCategories()
+            }
         }
     }
 }
-
 
 struct JokeView_Previews: PreviewProvider {
     static var previews: some View {

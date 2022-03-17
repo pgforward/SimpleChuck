@@ -19,17 +19,23 @@ struct JokeListView: View {
     var body: some View {
         
         List {
-            
+            Section(header: Text("\(jvm.jokes.count) Jokes")) {
             ForEach(jvm.jokes.indices, id: \.self) { index in
                 Text(jvm.jokes[index].value ?? "No Joke")
                     .padding(10)
                     .frame(maxWidth: .infinity)
                     .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color.yellow.opacity(index==0 ? 1.0 : 0.5)).shadow(radius: 2))
                     .foregroundColor(Color.primary)
-            }.listRowBackground(Color.purple.opacity(0.5))
-            
+            }
+            .onDelete(perform: delete)
+            .listRowBackground(Color.purple.opacity(0.5))
+           
+            }
         }
         
+    }
+    func delete(at offsets: IndexSet) {
+        jvm.removeJokes(atOffsets: offsets)
     }
 }
 

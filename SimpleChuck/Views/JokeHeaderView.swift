@@ -9,42 +9,27 @@ import SwiftUI
 
 struct JokeHeaderView: View {
     @EnvironmentObject private var jvm: JokeViewModel
-    
     var body: some View {
         
-        if jvm.categories.count < 1 {
-            Button("Fetch Categories", action: getCategories)
-                .font(.body)
-                .padding(10)
-                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color.green).shadow(radius: 2))
-                .foregroundColor(Color.primary)
-        }
-        
-        if jvm.categories.count > 0 {
+        Button(action: categoryListToggle) {
             HStack {
-                Text("Select a category")
-                Picker("Categories", selection: $jvm.selectedCategory) {
-                    ForEach(jvm.categories, id: \.self) {
-                        Text($0)
-                            .font(.body)
-                            .padding(10)
-                            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color.green).shadow(radius: 2))
-                            .foregroundColor(Color.primary)
-                    }
-                }
+                Image(systemName: "arrow.down")
+                    .rotationEffect(Angle(degrees: jvm.showCategoryList ? 180 : 0))
+                Text(jvm.selectedCategory)
+                    .animation(.none, value: jvm.selectedCategory)
             }
-            
         }
+        .buttonStyle(MyButtonStyle())
         
-        Button("Get Next Joke", action: getNextJoke)
-            .font(.body)
-            .padding(10)
-            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color.green).shadow(radius: 2))
-            .foregroundColor(Color.primary)
-        
+        if jvm.showCategoryList {
+            CategoryListView()
+        } else {
+            Button("Get Next Joke", action: getNextJoke)
+                .buttonStyle(MyButtonStyle())
+        }
     }
-    func getCategories() {
-        jvm.fetchCategories()
+    func categoryListToggle() {
+        jvm.toggleCategoryList()
     }
     
     func getNextJoke() {
@@ -57,3 +42,4 @@ struct JokesListView_Previews: PreviewProvider {
         JokeHeaderView()
     }
 }
+
