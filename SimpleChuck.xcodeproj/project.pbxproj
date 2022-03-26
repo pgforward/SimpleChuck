@@ -16,9 +16,11 @@
 		6A016CEC27DC35710052257B /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A016CEB27DC35710052257B /* JokeViewModel.swift */; };
 		6A016CF127DC3EDA0052257B /* JokeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A016CF027DC3EDA0052257B /* JokeHeaderView.swift */; };
 		6A016CF327DD39CC0052257B /* JokeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A016CF227DD39CC0052257B /* JokeListView.swift */; };
-		6A016CF527DD47F20052257B /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A016CF427DD47F20052257B /* JokeView.swift */; };
+		6A016CF527DD47F20052257B /* JokesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A016CF427DD47F20052257B /* JokesView.swift */; };
 		6A93BAE127E037820069384A /* MyStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A93BAE027E037820069384A /* MyStyles.swift */; };
 		6ADD26BB27E2BE0400F3D35E /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD26BA27E2BE0400F3D35E /* CategoryListView.swift */; };
+		6ADD26BD27EF92FA00F3D35E /* jvmSpeach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD26BC27EF92FA00F3D35E /* jvmSpeach.swift */; };
+		6ADD26BF27EF961200F3D35E /* JokeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD26BE27EF961200F3D35E /* JokeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +34,11 @@
 		6A016CEB27DC35710052257B /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
 		6A016CF027DC3EDA0052257B /* JokeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeHeaderView.swift; sourceTree = "<group>"; };
 		6A016CF227DD39CC0052257B /* JokeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeListView.swift; sourceTree = "<group>"; };
-		6A016CF427DD47F20052257B /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
+		6A016CF427DD47F20052257B /* JokesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesView.swift; sourceTree = "<group>"; };
 		6A93BAE027E037820069384A /* MyStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStyles.swift; sourceTree = "<group>"; };
 		6ADD26BA27E2BE0400F3D35E /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
+		6ADD26BC27EF92FA00F3D35E /* jvmSpeach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jvmSpeach.swift; sourceTree = "<group>"; };
+		6ADD26BE27EF961200F3D35E /* JokeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				6A016CEB27DC35710052257B /* JokeViewModel.swift */,
+				6ADD26BC27EF92FA00F3D35E /* jvmSpeach.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -117,8 +122,9 @@
 			children = (
 				6A016CF027DC3EDA0052257B /* JokeHeaderView.swift */,
 				6A016CF227DD39CC0052257B /* JokeListView.swift */,
-				6A016CF427DD47F20052257B /* JokeView.swift */,
+				6A016CF427DD47F20052257B /* JokesView.swift */,
 				6ADD26BA27E2BE0400F3D35E /* CategoryListView.swift */,
+				6ADD26BE27EF961200F3D35E /* JokeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,8 +213,10 @@
 				6A016CD927DAF0A10052257B /* ContentView.swift in Sources */,
 				6ADD26BB27E2BE0400F3D35E /* CategoryListView.swift in Sources */,
 				6A016CF127DC3EDA0052257B /* JokeHeaderView.swift in Sources */,
+				6ADD26BF27EF961200F3D35E /* JokeDetailView.swift in Sources */,
+				6ADD26BD27EF92FA00F3D35E /* jvmSpeach.swift in Sources */,
 				6A016CD727DAF0A10052257B /* SimpleChuckApp.swift in Sources */,
-				6A016CF527DD47F20052257B /* JokeView.swift in Sources */,
+				6A016CF527DD47F20052257B /* JokesView.swift in Sources */,
 				6A016CF327DD39CC0052257B /* JokeListView.swift in Sources */,
 				6A016CE627DAF10A0052257B /* Joke.swift in Sources */,
 			);

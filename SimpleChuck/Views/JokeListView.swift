@@ -21,11 +21,7 @@ struct JokeListView: View {
         List {
             Section(header: Text("\(jvm.jokes.count) Jokes")) {
             ForEach(jvm.jokes.indices, id: \.self) { index in
-                Text(jvm.jokes[index].value ?? "No Joke")
-                    .padding(10)
-                    .frame(maxWidth: .infinity)
-                    .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color.yellow.opacity(index==0 ? 1.0 : 0.5)).shadow(radius: 2))
-                    .foregroundColor(Color.primary)
+                JokeDetailView(joke: jvm.jokes[index], index: index)
             }
             .onDelete(perform: delete)
             .listRowBackground(Color.purple.opacity(0.5))
@@ -37,6 +33,7 @@ struct JokeListView: View {
     func delete(at offsets: IndexSet) {
         jvm.removeJokes(atOffsets: offsets)
     }
+
 }
 
 struct JokeListView_Previews: PreviewProvider {

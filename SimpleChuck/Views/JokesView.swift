@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct JokeView: View {
+struct JokesView: View {
     
     @EnvironmentObject private var jvm: JokeViewModel
     
@@ -34,6 +34,6 @@ struct JokeView: View {
 
 struct JokeView_Previews: PreviewProvider {
     static var previews: some View {
-        JokeView()
+        JokesView()
     }
 }
